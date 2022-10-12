@@ -1,16 +1,6 @@
 const _ = require("lodash");
 
-class Character {
-  constructor(name, description, action) {
-    this.name = name;
-    this.description = description;
-    this.action = action;
-  }
-
-  toString() {
-    return `${this.name} ${this.description}`.trim();
-  }
-}
+const Character = require("./character");
 
 class House {
   /*private static*/ CHARACTERS = [
