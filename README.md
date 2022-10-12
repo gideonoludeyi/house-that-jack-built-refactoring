@@ -1,6 +1,6 @@
 # house-that-jack-built-refactoring
 
-# Install Dependencies
+## Install Dependencies
 ```sh
 $ npm install
 ```
