@@ -49,6 +49,6 @@ describe("EchoHouse", () => {
 describe.skip("RandomHouse", () => {
   it("should recite the song with characters in random order", () => {
     const expected = undefined;
-    expect(new House(randomFormatter).recite(12)).toBe(expected);
+    expect(new House(randomFormatter).recite()).toBe(expected);
   });
 });
