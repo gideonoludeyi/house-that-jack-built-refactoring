@@ -27,7 +27,8 @@ describe("House", () => {
 });
 
 describe("HouseFormatter", () => {
-  const formatter = (characters = []) => characters.flatMap((character) => [character, character]);
+  const formatter = (characters = []) =>
+    characters.flatMap((character) => [character, character]);
 
   it("should recite a verse twice", () => {
     const expected =
