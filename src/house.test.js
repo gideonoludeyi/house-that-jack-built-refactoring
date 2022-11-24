@@ -47,13 +47,3 @@ describe("HouseFormatter", () => {
     expect(new House(formatter).verse(12)).toBe(expected);
   });
 });
-
-/** result is non-deterministic */
-describe.skip("RandomHouse", () => {
-  const testFormatter = (characters) => characters;
-
-  it("should recite the song with characters in random order", () => {
-    const expected = undefined;
-    expect(new House(testFormatter).recite()).toBe(expected);
-  });
-});
