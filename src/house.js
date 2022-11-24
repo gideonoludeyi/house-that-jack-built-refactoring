@@ -1,9 +1,9 @@
-const _ = require("lodash");
-
 const Character = require("./character");
+const Song = require("./song");
 
 class House {
   /*private static*/ CHARACTERS = [
+    { name: "the house", description: "", action: "Jack built" },
     { name: "the malt", description: "", action: "lay in" },
     { name: "the rat", description: "", action: "ate" },
     { name: "the cat", description: "", action: "killed" },
@@ -43,24 +43,19 @@ class House {
     format = (characters) => characters,
     characters = this.CHARACTERS
   ) {
-    this.characters = format(characters);
+    this.song = new Song(characters, format);
   }
 
   /*private*/ event(number) {
-    const character = this.characters[number - 1];
-    if (number == 0) return "the house that Jack built.";
-    else
-      return `${character} that ${character.action} ${this.event(number - 1)}`;
+    return this.song.event(number);
   }
 
   verse(number) {
-    return `This is ${this.event(number)}`;
+    return this.song.verse(number);
   }
 
   recite() {
-    return _.range(0, this.characters.length + 1)
-      .map((i) => this.verse(i))
-      .join("\n");
+    return this.song.recite();
   }
 }
 
