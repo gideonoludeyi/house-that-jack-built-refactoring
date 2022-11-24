@@ -1,5 +1,4 @@
 const House = require("./house");
-const { echoFormatter, randomFormatter } = require("./houseFormatter");
 
 describe("House", () => {
   it("should recite a verse", () => {
@@ -32,16 +31,20 @@ describe("HouseFormatter", () => {
 
   it("should recite a verse twice", () => {
     const expected =
-      "This is the maiden all forlorn that milked the maiden all forlorn that milked the cow with the crumpled horn that tossed the cow with the crumpled horn that tossed the dog that worried the dog that worried the cat that killed the cat that killed the rat that ate the rat that ate the malt that lay in the malt that lay in the house that Jack built.";
+      "This is the maiden all forlorn that milked " +
+      "the maiden all forlorn that milked " +
+      "the cow with the crumpled horn that tossed " +
+      "the cow with the crumpled horn that tossed " +
+      "the dog that worried " +
+      "the dog that worried " +
+      "the cat that killed " +
+      "the cat that killed " +
+      "the rat that ate " +
+      "the rat that ate " +
+      "the malt that lay in " +
+      "the malt that lay in " +
+      "the house that Jack built.";
     expect(new House(formatter).verse(12)).toBe(expected);
-  });
-});
-
-describe("EchoHouse", () => {
-  it("should recite a verse twice", () => {
-    const expected =
-      "This is the maiden all forlorn that milked the maiden all forlorn that milked the cow with the crumpled horn that tossed the cow with the crumpled horn that tossed the dog that worried the dog that worried the cat that killed the cat that killed the rat that ate the rat that ate the malt that lay in the malt that lay in the house that Jack built.";
-    expect(new House(echoFormatter).verse(12)).toBe(expected);
   });
 });
 
