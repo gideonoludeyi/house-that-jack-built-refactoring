@@ -17,6 +17,6 @@ describe.skip("random formatter", () => {
     const james = new Character("James", "calm and wise", "called");
     const characters = [john, james];
     const expected = [james, john];
-    expect(echoFormatter(characters)).toStrictEqual(expected);
+    expect(randomFormatter(characters)).toStrictEqual(expected);
   });
 });
