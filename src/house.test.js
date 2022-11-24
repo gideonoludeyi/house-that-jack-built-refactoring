@@ -43,7 +43,8 @@ describe("HouseFormatter", () => {
       "the rat that ate " +
       "the malt that lay in " +
       "the malt that lay in " +
+      "the house that Jack built " +
       "the house that Jack built.";
-    expect(new House(formatter).verse(12)).toBe(expected);
+    expect(new House(formatter).verse(13)).toBe(expected);
   });
 });
