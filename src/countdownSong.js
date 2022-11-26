@@ -1,7 +1,7 @@
 const _ = require("lodash");
 
-class Song {
-  constructor(characters, formatter) {
+class CountdownSong {
+  constructor(characters, formatter = (characters) => characters) {
     this.characters = formatter(characters);
   }
 
@@ -23,4 +23,4 @@ class Song {
   }
 }
 
-module.exports = Song;
+module.exports = CountdownSong;

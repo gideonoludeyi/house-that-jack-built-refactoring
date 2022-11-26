@@ -1,5 +1,5 @@
 const Character = require("./character");
-const { echoFormatter, randomFormatter } = require("./houseFormatter");
+const { echoFormatter, randomFormatter } = require("./songFormatter");
 
 describe("echo formatter", () => {
   it("should duplicate each character in the story", () => {
@@ -16,7 +16,7 @@ describe.skip("random formatter", () => {
     const john = new Character("John", "strong and tall", "won");
     const james = new Character("James", "calm and wise", "called");
     const characters = [john, james];
-    const expected = [james, john];
+    const expected = [james, john]; // or [john, james];
     expect(randomFormatter(characters)).toStrictEqual(expected);
   });
 });
